@@ -2,11 +2,8 @@ import express from 'express';
 import fetch from 'node-fetch';
 import cors from 'cors';
 
-
 const app = express();
-app.use(cors()); 
-const PORT = 5000;
-
+app.use(cors());
 
 app.get('/api/palettes', async (req, res) => {
   try {
@@ -19,6 +16,4 @@ app.get('/api/palettes', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Proxy server running on http://localhost:${PORT}`);
-});
+export default app;
